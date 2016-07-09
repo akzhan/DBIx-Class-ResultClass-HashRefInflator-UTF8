@@ -1,3 +1,4 @@
+requires "Scalar::Util";
 requires "DBIx::Class";
 
 on test => sub {

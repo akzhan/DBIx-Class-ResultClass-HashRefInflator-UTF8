@@ -4,6 +4,8 @@ use strict;
 use warnings;
 use utf8;
 
+use Scalar::Util qw( looks_like_number );
+
 # ABSTRACT: Get raw hashrefs from a resultset with utf-8 flag
 
 # VERSION
@@ -68,7 +70,7 @@ sub inflate_result {
     return {
         map {
             my $val = $res->{$_};
-            utf8::decode($val)  if defined $val && !ref($val);
+            utf8::decode($val)  if defined $val && !ref($val) && !looks_like_number($val);
             ( $_ => $val );
         } keys %$res
     };
