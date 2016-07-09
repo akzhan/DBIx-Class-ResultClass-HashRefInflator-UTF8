@@ -1,6 +1,7 @@
 requires "DBIx::Class";
 
 on test => sub {
+    requires "Test::Pod::Coverage";
     requires "Dist::Zilla";
     requires "Dist::Zilla::Plugin::Git::Check";
     requires "Dist::Zilla::Plugin::Git::Commit";
