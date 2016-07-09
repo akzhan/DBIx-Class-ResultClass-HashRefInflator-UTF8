@@ -4,6 +4,10 @@ use strict;
 use warnings;
 use utf8;
 
+# ABSTRACT: Get raw hashrefs from a resultset with utf-8 flag
+
+# VERSION
+
 use parent qw( DBIx::Class::ResultClass::HashRefInflator );
 
 sub inflate_result {
