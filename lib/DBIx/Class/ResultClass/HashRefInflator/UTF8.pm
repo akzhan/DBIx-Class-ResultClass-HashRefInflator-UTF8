@@ -93,7 +93,7 @@ following:
  my $artist = $artitsts_rs->search({}, {prefetch => 'cds' })->first;
 
  my $cds = $artist->cds;
- $cds->result_class('DBIx::Class::ResultClass::HashRefInflator');
+ $cds->result_class('DBIx::Class::ResultClass::HashRefInflator::UTF8');
  my $first = $cds->first;
 
 C<$first> will B<not> be a hashref, it will be a normal CD row since
