@@ -39,6 +39,10 @@ resultset (and any chained off of it); or
 uses of that result source to be inflated to hash-refs - this approach is not
 recommended.
 
+# NOTE
+
+This module should be used to force UTF8 on your results in case your DBI/DBD/lib-$protocol pipeline does not support unicode natively (similar to the higher-level [DBIx::Class::ForceUTF8](https://metacpan.org/pod/DBIx::Class::ForceUTF8)).
+
 # METHODS
 
 ## inflate\_result
