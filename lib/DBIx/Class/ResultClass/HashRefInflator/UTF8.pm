@@ -10,7 +10,7 @@ use Scalar::Util qw( looks_like_number );
 
 =head1 NOTE
 
-This module should be used to force UTF8 on your results in case your DBI/DBD/lib-$protocol pipeline does not support unicode natively (similar to the higher-level L<DBIx::Class::ForceUTF8>.
+This module should be used to force UTF8 on your results in case your DBI/DBD/lib-$protocol pipeline does not support unicode natively (similar to the higher-level L<DBIx::Class::ForceUTF8>).
 
 =cut
 
