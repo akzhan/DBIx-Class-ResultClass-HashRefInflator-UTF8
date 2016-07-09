@@ -6,7 +6,7 @@ DBIx::Class::ResultClass::HashRefInflator::UTF8 - Get raw hashrefs from a result
 
 # VERSION
 
-version 1.000004
+version 1.000005
 
 # SYNOPSIS
 
@@ -53,7 +53,7 @@ following:
         my $artist = $artitsts_rs->search({}, {prefetch => 'cds' })->first;
 
         my $cds = $artist->cds;
-        $cds->result_class('DBIx::Class::ResultClass::HashRefInflator');
+        $cds->result_class('DBIx::Class::ResultClass::HashRefInflator::UTF8');
         my $first = $cds->first;
 
     `$first` will **not** be a hashref, it will be a normal CD row since

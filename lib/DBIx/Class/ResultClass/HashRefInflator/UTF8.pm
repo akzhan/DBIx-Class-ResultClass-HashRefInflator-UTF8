@@ -67,13 +67,12 @@ sub inflate_result {
     my $res =  $self->SUPER::inflate_result( @args );
     return $res  if ref($res) ne 'HASH';
 
-    return {
-        map {
-            my $val = $res->{$_};
-            utf8::decode($val)  unless looks_like_number($val);
-            ( $_ => $val );
-        } keys %$res
-    };
+    for ( keys %$res ) {
+        my $val = $res->{$_};
+        utf8::decode( $res->{$_} )  if defined($val) && !ref($val) && !looks_like_number( $val );
+    }
+
+    return $res;
 }
 
 1;
