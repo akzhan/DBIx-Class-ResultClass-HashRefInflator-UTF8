@@ -6,7 +6,7 @@ DBIx::Class::ResultClass::HashRefInflator::UTF8 - Get raw hashrefs from a result
 
 # VERSION
 
-version 1.000003
+version 1.000004
 
 # SYNOPSIS
 

@@ -70,7 +70,7 @@ sub inflate_result {
     return {
         map {
             my $val = $res->{$_};
-            utf8::decode($val)  if defined $val && !ref($val) && !looks_like_number($val);
+            utf8::decode($val)  unless looks_like_number($val);
             ( $_ => $val );
         } keys %$res
     };
